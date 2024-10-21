@@ -15,7 +15,7 @@
     transition: border 0.2s ease-in, box-shadow 0.2s ease-in;
     font-family: 'Roboto', sans-serif;
     
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
         font-size: 1.8rem;
         padding: 1.8rem 2.1rem;
 

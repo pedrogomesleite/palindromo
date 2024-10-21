@@ -4,7 +4,6 @@ const correctTextEle = document.querySelector('.correct');
 
 
 textEle.addEventListener('input', e => {
-    console.log(e.target.value);
     const value = e.target.value;
     if (verifyPalindromo(value)) {
         centerEle.style.border = '2px solid lawngreen';
@@ -20,12 +19,12 @@ textEle.addEventListener('input', e => {
 })
 
 function verifyPalindromo(value) {
+    value = value.replaceAll(' ', '');
+    console.log(value);
     const mei = value.length;
     let traz = value.length - 1;
-    console.log(traz)
     for (let i = 0; i < mei; i++) {
-        if (value.charAt(i) !== value.charAt(traz)) {
-            console.log(value[i], value[traz]);
+        if (value.charAt(i).toLowerCase() !== value.charAt(traz).toLowerCase()) {
             return false;
         }
         traz--;
