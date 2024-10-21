@@ -20,6 +20,7 @@ textEle.addEventListener('input', e => {
 
 function verifyPalindromo(value) {
     value = value.replaceAll(' ', '');
+    value = value.toLowerCase();
     console.log(value);
     const mei = value.length;
     let traz = value.length - 1;
